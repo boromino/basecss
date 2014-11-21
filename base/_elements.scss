@@ -1,0 +1,155 @@
+// Based on HTML specification, W3C Working Draft 17 June 2014
+// http://www.w3.org/TR/html51/
+
+// =Root
+// -----------------------------------------------------------------------------
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  @include box-sizing(border-box);
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  @include box-sizing(inherit);
+}
+
+// =Sections
+// -----------------------------------------------------------------------------
+body {}
+article {}
+section {}
+nav {}
+aside {}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+header {}
+footer {}
+address {}
+
+// =Grouping content
+// -----------------------------------------------------------------------------
+p {}
+hr {}
+pre {}
+blockquote {}
+ol {}
+ul {}
+li {}
+dl {}
+dt {}
+dd {}
+figure {}
+figcaption {}
+main {}
+div {}
+
+// =Text-level semantics
+// -----------------------------------------------------------------------------
+a {
+  // Prevent outlines from "spilling over"
+  // http://24ways.org/2009/dont-lose-your-focus
+  &:focus {
+    overflow: hidden;
+  }
+}
+
+em {}
+strong {}
+small {}
+s {}
+cite {}
+q {}
+dfn {}
+abbr {}
+ruby {}
+rb {}
+rt {}
+rtc {}
+rp {}
+data {}
+time {}
+code {}
+var {}
+samp {}
+kbd {}
+sub {}
+sup {}
+i {}
+b {}
+u {}
+mark {}
+bdi {}
+bdo {}
+span {}
+br {}
+wbr {}
+
+// =Edits
+// -----------------------------------------------------------------------------
+ins {}
+del {}
+
+// =Embedded content
+// -----------------------------------------------------------------------------
+img {
+  height: auto;
+  max-width: 100%;
+  // Remove white space below image
+  vertical-align: top;
+}
+
+iframe {}
+embed {}
+object {}
+param {}
+video {}
+audio {}
+source {}
+track {}
+map {}
+area {}
+
+// =Tabular data
+// -----------------------------------------------------------------------------
+table {}
+caption {}
+colgroup {}
+col {}
+tbody {}
+thead {}
+tfoot {}
+tr {}
+td {}
+th {}
+
+// =Forms
+// -----------------------------------------------------------------------------
+form {}
+label {}
+input {}
+button {}
+select {}
+datalist {}
+optgroup {}
+option {}
+textarea {}
+keygen {}
+output {}
+progress {}
+meter {}
+fieldset {}
+legend {}
+
+// =Interactive elements
+// -----------------------------------------------------------------------------
+details {}
+summary {}
+menu {}
+menuitem {}
+dialog {}
+template {}
+canvas {}
