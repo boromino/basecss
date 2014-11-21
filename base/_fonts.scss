@@ -1,0 +1,22 @@
+// http://www.oliverdavies.co.uk/blog/include-css-fonts-using-sass-each-loop
+// Organise your font files into directories, using the the font name for both
+// the directory name and for the file names:
+// ├── FuturaBold
+// │   ├── FuturaBold.eot
+// │   ├── FuturaBold.svg
+// │   ├── FuturaBold.ttf
+// │   └── FuturaBold.woff
+@if $fonts {
+  @each $family in $fonts {
+    @font-face {
+      font-family: #{$family};
+      src: url('../fonts/#{$family}/#{$family}.eot');
+      src: url('../fonts/#{$family}/#{$family}.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/#{$family}/#{$family}.woff') format('woff'),
+           url('../fonts/#{$family}/#{$family}.ttf') format('truetype'),
+           url('../fonts/#{$family}/#{$family}.svg##{$family}') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+}
