@@ -7,6 +7,12 @@
 html {
   @include box-sizing(border-box);
   font-size: 100%;
+  // http://davidwalsh.name/html5-boilerplate
+  // Force vertical scrollbar and prevent mobile browsers from adjusting
+  // the page font.
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 *, *:before, *:after {
