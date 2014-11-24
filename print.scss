@@ -1,0 +1,14 @@
+// http://www.webdesignerdepot.com/2010/01/10-tips-for-better-print-style-sheets/
+a:after {
+  content: ' (' attr(href) ') '
+}
+
+/* http://www.alistapart.com/articles/goingtoprint/ */
+a[href^="/"]:after {
+  content: ' (http://www.boromino.com' attr(href) ') ';
+}
+
+abbr[title]:after,
+dfn[title]:after {
+  content: ' (' attr(title) ') '
+}
