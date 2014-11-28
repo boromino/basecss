@@ -1,6 +1,9 @@
 // Based on HTML specification, W3C Working Draft 17 June 2014
 // http://www.w3.org/TR/html51/
 
+// =Viewport
+@include viewport(device-width, 1);
+
 // =Root
 // -----------------------------------------------------------------------------
 // http://www.paulirish.com/2012/box-sizing-border-box-ftw/

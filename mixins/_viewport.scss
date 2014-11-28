@@ -1,0 +1,11 @@
+// The zoom descriptor is equivalent to the initial-scale viewport property
+// in the meta tag.
+// For browsers that don’t support @viewport , you should continue to include
+// the meta viewport element.
+@mixin viewport($width, $zoom) {
+  @-webkit-viewport{ width: $width; zoom: $zoom; }
+  @-moz-viewport{ width: $width; zoom: $zoom; }
+  @-ms-viewport{ width: $width; zoom: $zoom; }
+  @-o-viewport{ width: $width; zoom: $zoom; }
+  @viewport{ width: $width; zoom: $zoom; }
+}
