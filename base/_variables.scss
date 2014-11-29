@@ -1,3 +1,8 @@
+// List the names of the fonts as
+// <FONT-FAMILY FONT-FILE-NAME>, <FONT-FAMILY FONT-FILE-NAME>.
+// Each font name combination will get looped through using the first name
+// as folder name and the second as font file name, e.g.:
+// $fonts: FontRegular font-regular, FontBold font-bold;
 $fonts: false !default;
 $fonts-path: '../fonts/';
 

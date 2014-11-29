@@ -1,20 +1,22 @@
 // http://www.oliverdavies.co.uk/blog/include-css-fonts-using-sass-each-loop
-// Organise your font files into directories, using the the font name for both
-// the directory name and for the file names:
+// Organise your font files into directories, using the font-family name for
+// the directory name:
 // ├── FuturaBold
-// │   ├── FuturaBold.eot
-// │   ├── FuturaBold.svg
-// │   ├── FuturaBold.ttf
-// │   └── FuturaBold.woff
+// │   ├── futura-bold-webfont.eot
+// │   ├── futura-bold-webfont.svg
+// │   ├── futura-bold-webfont.ttf
+// │   ├── futura-bold-webfont.woff
+// │   └── futura-bold-webfont.woff2
 @if $fonts {
   @each $family in $fonts {
     @font-face {
-      font-family: #{$family};
-      src: url('#{$fonts-path}#{$family}/#{$family}.eot');
-      src: url('#{$fonts-path}#{$family}/#{$family}.eot?#iefix') format('embedded-opentype'),
-           url('#{$fonts-path}#{$family}/#{$family}.woff') format('woff'),
-           url('#{$fonts-path}#{$family}/#{$family}.ttf') format('truetype'),
-           url('#{$fonts-path}#{$family}/#{$family}.svg##{$family}') format('svg');
+      font-family: #{nth($family, 1)};
+      src: url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.eot');
+      src: url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.eot?#iefix') format('embedded-opentype'),
+           url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.woff2') format('woff2'),
+           url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.woff') format('woff'),
+           url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.ttf') format('truetype'),
+           url('#{$fonts-path}#{nth($family, 1)}/#{nth($family, 2)}.svg##{nth($family, 1)}') format('svg');
       font-weight: normal;
       font-style: normal;
     }
