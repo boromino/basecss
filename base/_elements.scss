@@ -64,6 +64,13 @@ a {
   &:focus {
     overflow: hidden;
   }
+  
+  .active {
+    // Disable current page links
+    // http://css-tricks.com/pointer-events-current-nav/
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 em {}
