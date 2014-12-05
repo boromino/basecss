@@ -65,6 +65,11 @@ a {
     overflow: hidden;
   }
   
+  &:hover,
+  &:active {
+    outline: none;
+  }
+  
   .active {
     // Disable current page links
     // http://css-tricks.com/pointer-events-current-nav/
